@@ -1,0 +1,38 @@
+{
+    "basic_info": {
+      "name": "Alex Yang",
+      "titles": [ "Software Engineer"],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com/Alex-wuhu",
+          "class": "fab fa-github"
+        }
+      ],
+      "image": "myProfile.jpg"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "C#",
+          "class": "devicon-csharp-plain",
+          "level": "85"
+        },
+        {
+          "name": "HTML 5",
+          "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+          "name": "CSS 3",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
+          "name": "JavaScript",
+          "class": "devicon-javascript-plain",
+          "level": "50"
+        }
+      ]
+    }
+  }
