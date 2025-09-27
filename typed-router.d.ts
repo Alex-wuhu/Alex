@@ -26,7 +26,6 @@ declare module 'vue-router/auto-routes' {
     '/chat-zh': RouteRecordInfo<'/chat-zh', '/chat-zh', Record<never, never>, Record<never, never>>,
     '/demos': RouteRecordInfo<'/demos', '/demos', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
-    '/photos': RouteRecordInfo<'/photos', '/photos', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving': RouteRecordInfo<'/posts/about-yak-shaving', '/posts/about-yak-shaving', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving-zh': RouteRecordInfo<'/posts/about-yak-shaving-zh', '/posts/about-yak-shaving-zh', Record<never, never>, Record<never, never>>,
@@ -80,10 +79,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/notes.md': {
       routes: '/notes'
-      views: never
-    }
-    'pages/photos.md': {
-      routes: '/photos'
       views: never
     }
     'pages/posts/index.md': {

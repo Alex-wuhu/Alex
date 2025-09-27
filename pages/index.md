@@ -12,7 +12,7 @@ Dreaming up cool ideas and making them come true is where my passion lies. I am 
 
 I write [blog posts](/posts) about open source, coding, etc.
 
-Outside of programming, I enjoy doing photography and traveling. Also, in case you are interested, here are the [hardware/software I use](/use).
+Outside of programming, I enjoy traveling. Also, in case you are interested, here are the [hardware/software I use](/use).
 
 <div flex-auto />
 

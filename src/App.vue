@@ -26,7 +26,7 @@ useEventListener('click', async (e) => {
     return
   if (path.some(el => el instanceof HTMLElement && ['A', 'BUTTON'].includes(el.tagName)))
     return
-  if (!path.some(el => el instanceof HTMLElement && (el.classList.contains('prose') || el.classList.contains('photos'))))
+  if (!path.some(el => el instanceof HTMLElement && el.classList.contains('prose')))
     return
 
   // Do not open image when they are moving. Mainly for mobile to avoid conflict with hovering behavior.
