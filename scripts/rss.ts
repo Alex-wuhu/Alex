@@ -8,8 +8,8 @@ import MarkdownIt from 'markdown-it'
 
 const DOMAIN = 'https://antfu.me'
 const AUTHOR = {
-  name: 'Anthony Fu',
-  email: 'hi@antfu.me',
+  name: 'Alex Yang',
+  email: 'yanglongwei06@gmail.com',
   link: DOMAIN,
 }
 const markdown = MarkdownIt({
@@ -26,11 +26,11 @@ async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
   const options = {
-    title: 'Anthony Fu',
-    description: 'Anthony Fu\' Blog',
+    title: 'Alex Yang',
+    description: 'Alex Yang\'s Blog',
     id: 'https://antfu.me/',
     link: 'https://antfu.me/',
-    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
+    copyright: 'CC BY-NC-SA 4.0 2021 © Alex Yang',
     feedLinks: {
       json: 'https://antfu.me/feed.json',
       atom: 'https://antfu.me/feed.atom',

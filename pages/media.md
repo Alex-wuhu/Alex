@@ -1,5 +1,5 @@
 ---
-title: Media Consumption - Anthony Fu
+title: Media Consumption - Alex Yang
 display: Media Consumption
 description: Anthony's Media Consumption
 ---

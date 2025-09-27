@@ -1,5 +1,5 @@
 ---
-title: Let's Chat - Anthony Fu
+title: Let's Chat - Alex Yang
 display: Let's Chat!
 image: https://antfu.me/og-chat.png
 art: dots
