@@ -38,9 +38,7 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
-        <!-- <RouterLink to="/chat" title="Let's Chat">
-          <div i-ri-chat-1-line />
-        </RouterLink> -->
+
         <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>

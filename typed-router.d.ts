@@ -20,11 +20,6 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
-    '/bar': RouteRecordInfo<'/bar', '/bar', Record<never, never>, Record<never, never>>,
-    '/bookmarks': RouteRecordInfo<'/bookmarks', '/bookmarks', Record<never, never>, Record<never, never>>,
-    '/chat': RouteRecordInfo<'/chat', '/chat', Record<never, never>, Record<never, never>>,
-    '/chat-zh': RouteRecordInfo<'/chat-zh', '/chat-zh', Record<never, never>, Record<never, never>>,
-    '/demos': RouteRecordInfo<'/demos', '/demos', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving': RouteRecordInfo<'/posts/about-yak-shaving', '/posts/about-yak-shaving', Record<never, never>, Record<never, never>>,
@@ -55,26 +50,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/[...404].md': {
       routes: '/[...404]'
-      views: never
-    }
-    'pages/bar.md': {
-      routes: '/bar'
-      views: never
-    }
-    'pages/bookmarks.md': {
-      routes: '/bookmarks'
-      views: never
-    }
-    'pages/chat.md': {
-      routes: '/chat'
-      views: never
-    }
-    'pages/chat-zh.md': {
-      routes: '/chat-zh'
-      views: never
-    }
-    'pages/demos.md': {
-      routes: '/demos'
       views: never
     }
     'pages/notes.md': {
