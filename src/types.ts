@@ -12,6 +12,7 @@ export interface Post {
   video?: boolean
   inperson?: boolean
   redirect?: string
+  cover?: string
 }
 
 export interface Talk {

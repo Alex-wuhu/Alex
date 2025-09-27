@@ -153,8 +153,7 @@ export default defineConfig({
             ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],
             ['https://github.com/nuxt/nuxt', 'https://nuxt.com/assets/design-kit/icon-green.svg'],
             ['https://github.com/vitejs/vite', 'https://vitejs.dev/logo.svg'],
-            ['https://github.com/sponsors', 'https://github.com/github.png'],
-            ['https://github.com/sponsors/antfu', 'https://github.com/github.png'],
+
             ['https://nuxtlabs.com', 'https://github.com/nuxtlabs.png'],
             [/opencollective\.com\/vite/, 'https://github.com/vitejs.png'],
             [/opencollective\.com\/elk/, 'https://github.com/elk-zone.png'],

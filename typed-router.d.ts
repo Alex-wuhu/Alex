@@ -24,7 +24,6 @@ declare module 'vue-router/auto-routes' {
     '/bookmarks': RouteRecordInfo<'/bookmarks', '/bookmarks', Record<never, never>, Record<never, never>>,
     '/chat': RouteRecordInfo<'/chat', '/chat', Record<never, never>, Record<never, never>>,
     '/chat-zh': RouteRecordInfo<'/chat-zh', '/chat-zh', Record<never, never>, Record<never, never>>,
-    '/collective-sponsor-onetime': RouteRecordInfo<'/collective-sponsor-onetime', '/collective-sponsor-onetime', Record<never, never>, Record<never, never>>,
     '/demos': RouteRecordInfo<'/demos', '/demos', Record<never, never>, Record<never, never>>,
     '/media': RouteRecordInfo<'/media', '/media', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
@@ -39,7 +38,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
     '/posts/hello-tokyo': RouteRecordInfo<'/posts/hello-tokyo', '/posts/hello-tokyo', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
-    '/sponsors-list': RouteRecordInfo<'/sponsors-list', '/sponsors-list', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
   }
@@ -77,10 +75,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/chat-zh.md': {
       routes: '/chat-zh'
-      views: never
-    }
-    'pages/collective-sponsor-onetime.md': {
-      routes: '/collective-sponsor-onetime'
       views: never
     }
     'pages/demos.md': {
@@ -137,10 +131,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/projects.md': {
       routes: '/projects'
-      views: never
-    }
-    'pages/sponsors-list.md': {
-      routes: '/sponsors-list'
       views: never
     }
     'pages/streams.md': {

@@ -370,10 +370,7 @@ projects:
       desc: 'Use the right package manager'
       link: 'https://github.com/antfu/ni'
       icon: 'i-codicon-package'
-    - name: 'sponsorkit'
-      link: 'https://github.com/antfu/sponsorkit'
-      desc: 'Toolkit for generating sponsors images'
-      icon: 'i-carbon-favorite'
+
     - name: 'broz'
       link: 'https://github.com/antfu/broz'
       desc: 'A simple, frameless browser for screenshots'
