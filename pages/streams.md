@@ -8,7 +8,7 @@ items:
     path: 'https://x.com/i/broadcasts/1dRKZaBgovXxB'
     platform: X
     lang: 'en'
-    cover: '/images/streams/agents-of-the-permaweb.svg'
+    cover: '#file:agents-of-the-permaweb.jpg'
 ---
 
 <SubNav />
