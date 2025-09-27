@@ -25,10 +25,8 @@ declare module 'vue-router/auto-routes' {
     '/chat': RouteRecordInfo<'/chat', '/chat', Record<never, never>, Record<never, never>>,
     '/chat-zh': RouteRecordInfo<'/chat-zh', '/chat-zh', Record<never, never>, Record<never, never>>,
     '/demos': RouteRecordInfo<'/demos', '/demos', Record<never, never>, Record<never, never>>,
-    '/media': RouteRecordInfo<'/media', '/media', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/photos': RouteRecordInfo<'/photos', '/photos', Record<never, never>, Record<never, never>>,
-    '/podcasts': RouteRecordInfo<'/podcasts', '/podcasts', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving': RouteRecordInfo<'/posts/about-yak-shaving', '/posts/about-yak-shaving', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving-zh': RouteRecordInfo<'/posts/about-yak-shaving-zh', '/posts/about-yak-shaving-zh', Record<never, never>, Record<never, never>>,
@@ -36,7 +34,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/get-package-root': RouteRecordInfo<'/posts/get-package-root', '/posts/get-package-root', Record<never, never>, Record<never, never>>,
     '/posts/github-alerts': RouteRecordInfo<'/posts/github-alerts', '/posts/github-alerts', Record<never, never>, Record<never, never>>,
     '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
-    '/posts/hello-tokyo': RouteRecordInfo<'/posts/hello-tokyo', '/posts/hello-tokyo', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
@@ -81,20 +78,12 @@ declare module 'vue-router/auto-routes' {
       routes: '/demos'
       views: never
     }
-    'pages/media.md': {
-      routes: '/media'
-      views: never
-    }
     'pages/notes.md': {
       routes: '/notes'
       views: never
     }
     'pages/photos.md': {
       routes: '/photos'
-      views: never
-    }
-    'pages/podcasts.md': {
-      routes: '/podcasts'
       views: never
     }
     'pages/posts/index.md': {
@@ -123,10 +112,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/github-co-authors.md': {
       routes: '/posts/github-co-authors'
-      views: never
-    }
-    'pages/posts/hello-tokyo.md': {
-      routes: '/posts/hello-tokyo'
       views: never
     }
     'pages/projects.md': {

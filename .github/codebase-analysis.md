@@ -5,14 +5,10 @@
 1. Consider updating README with dev/build instructions tailored to Alex's personal site.
 2. Ensure removed blog slugs aren't referenced externally (e.g., in `ListPosts` dataset snapshots) before deployment.
 3. Document photo-management scripts prerequisites (Sharp/libvips) for smoother onboarding.
-4. **Complete sponsor removal completed (2025-09-27)**: This is now Alex Yang's personal website with all sponsor functionality removed:
-   - Removed pages: `sponsors-list.md`, `collective-sponsor-onetime.md`
-   - Removed components: `SponsorsView.vue`, `SponsorsCircles.vue`, `SponsorButtons.vue`, `SponsorButtonCollective.vue`
-   - Removed scripts: `sponsors-circles.ts`, `copy-sponsors.ts`
-   - Removed assets: `sponsors.svg`, sponsor OG images, temp sponsor artifacts
-   - Removed redirects: `/sponsor`, `/support` routes
-   - Removed navigation: sponsor link from NavBar
-   - Bundle size reduced significantly (removed 1.5MB+ sponsors-list chunk)lex Yang's personal portfolio website - Vue 3 static site powered by Vite + Vite SSG, deployed to Netlify.
+4. **Complete content cleanup (2025-09-27)**: This is now Alex Yang's personal website with unnecessary features removed:
+   - **Sponsor removal**: Pages, components, scripts, assets, redirects, and navigation completely removed (bundle size reduced by 1.5MB+ sponsors-list chunk)
+   - **Podcast removal**: `podcasts.md` page, navigation links, and OG assets removed as not planned for Alex's use case
+   - Streamlined navigation focusing on core content: Blog, Projects, Photos, Demos, Streams, and personal pageslex Yang's personal portfolio website - Vue 3 static site powered by Vite + Vite SSG, deployed to Netlify.
 
 - Originally based on Anthony Fu's website template, fully rebranded and customized for Alex Yang.
 - Automatic file-based routing (`unplugin-vue-router`) combined with Markdown-to-Vue transform (`unplugin-vue-markdown`).
@@ -55,6 +51,10 @@
   - Sponsor components (`SponsorsView.vue`, `SponsorsCircles.vue`, `SponsorButtons.vue`, etc.)
   - Sponsor navigation links, redirects, and build scripts
   - Sponsor-related CSS classes and assets
+- **Podcast removal**: Removed podcast functionality as not planned:
+  - Removed `podcasts.md` page and navigation links
+  - Removed podcast references from `NavBar.vue` and `SubNav.vue`
+  - Removed podcast OG image assets
 - **Build verification**: Confirmed builds continue to succeed after all changes via `pnpm run build` and `pnpm run lint`.
 
 ## Observations & Next Steps

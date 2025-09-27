@@ -10,7 +10,9 @@ Working at {Apus network}<br>
 
 Dreaming up cool ideas and making them come true is where my passion lies. I am enthusiastic about building tools that help myself and others to be more productive and enjoy the process of crafting. You can find my [full projects list here](/projects).
 
-I give [talks](/talks) and write [blog posts](/posts) about open source, coding, etc.
+I write [blog posts](/posts) about open source, coding, etc.
+
+Outside of programming, I enjoy doing photography and traveling. Also, in case you are interested, here are the [hardware/software I use](/use).
 
 <div flex-auto />
 

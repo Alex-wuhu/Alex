@@ -419,10 +419,7 @@ projects:
       icon: 'i-carbon:tree-view-alt'
 
   Websites / Online Tools:
-    - name: 'Elk'
-      link: 'https://github.com/elk-zone/elk'
-      desc: 'A nimble Mastodon web client'
-      icon: 'elk'
+
     - name: 'Icônes'
       link: 'https://icones.js.org/'
       desc: 'Iconify Explorer with Instant searching'

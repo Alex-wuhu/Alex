@@ -6,7 +6,7 @@ art: dots
 ---
 
 > [!IMPORTANT]
-> I am sorry I am currently busy on my personal changes and **NOT available for chat**. Feel free to interact with me on [Bluesky](https://bsky.app/profile/antfu.me) instead. I will be back soon! Thank you for your understanding.
+> I am sorry I am currently busy on my personal changes and **NOT available for chat**. I will be back soon! Thank you for your understanding.
 
 [中文 Chinese](/chat-zh)
 
