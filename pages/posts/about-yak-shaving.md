@@ -1,6 +1,6 @@
 ---
 title: About Yak Shaving
-date: 2021-05-19T16:00:00.000+00:00
+date: 2021-05-19
 lang: en
 duration: 10min
 ---

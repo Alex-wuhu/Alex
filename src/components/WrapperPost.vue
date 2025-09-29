@@ -12,9 +12,6 @@ const router = useRouter()
 const route = useRoute()
 const content = ref<HTMLDivElement>()
 
-const base = 'https://antfu.me'
-const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @antfu7\'s ${base}${route.path}\n\nI think...`)}`)
-
 onMounted(() => {
   const navigate = () => {
     if (location.hash) {
@@ -106,6 +103,15 @@ const ArtComponent = computed(() => {
     >
       {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
+    <div v-if="frontmatter.tags" class="tags" flex="~ wrap gap-2" mt-4>
+      <span
+        v-for="tag in frontmatter.tags"
+        :key="tag"
+        class="text-sm bg-zinc:15 text-zinc5 rounded px-2 py-1"
+      >
+        #{{ tag }}
+      </span>
+    </div>
     <p v-if="frontmatter.place" class="mt--4!">
       <span op50>at </span>
       <a v-if="frontmatter.placeLink" :href="frontmatter.placeLink" target="_blank">
@@ -136,16 +142,6 @@ const ArtComponent = computed(() => {
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
-    <template v-if="frontmatter.duration">
-      <span font-mono op50>> </span>
-      <span op50>comment on </span>
-      <a :href="blueskyUrl" target="_blank" op50>bluesky</a>
-      <span op25> / </span>
-      <a :href="elkUrl" target="_blank" op50>mastodon</a>
-      <span op25> / </span>
-      <a :href="tweetUrl" target="_blank" op50>twitter</a>
-    </template>
-    <br>
     <span font-mono op50>> </span>
     <RouterLink
       :to="route.path.split('/').slice(0, -1).join('/') || '/'"

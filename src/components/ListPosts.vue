@@ -24,7 +24,10 @@ const routes: Post[] = router.getRoutes()
     redirect: i.meta.frontmatter.redirect,
     place: i.meta.frontmatter.place,
     cover: i.meta.frontmatter.cover,
+    tags: i.meta.frontmatter.tags,
   }))
+
+const selectedTag = ref('')
 
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
@@ -34,8 +37,14 @@ const posts = computed(() =>
       const dateB = new Date(b.date)
       return +dateB - +dateA
     })
-    .filter(i => !englishOnly.value || !i.lang || i.lang === 'en'),
+    .filter(i => !englishOnly.value || !i.lang || i.lang === 'en')
+    .filter(p => !selectedTag.value || (p.tags && p.tags.includes(selectedTag.value))),
 )
+const allTags = computed(() => {
+  const tags = new Set<string>()
+  routes.forEach(p => p.tags?.forEach(t => tags.add(t)))
+  return Array.from(tags).sort()
+})
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isFuture = (a?: Date | string | number) => a && new Date(a) > new Date()
@@ -52,6 +61,14 @@ function getGroupName(p: Post) {
 </script>
 
 <template>
+  <div class="flex flex-wrap gap-2 items-center mb-8">
+    <button :class="{ 'bg-zinc-200': !selectedTag }" class="text-sm bg-zinc-100 text-zinc-500 rounded px-2 py-1" @click="selectedTag = ''">
+      All
+    </button>
+    <button v-for="tag in allTags" :key="tag" :class="{ 'bg-zinc-200': selectedTag === tag }" class="text-sm bg-zinc-100 text-zinc-500 rounded px-2 py-1" @click="selectedTag = tag">
+      {{ tag }}
+    </button>
+  </div>
   <ul>
     <template v-if="!posts.length">
       <div py2 op50>
@@ -100,24 +117,35 @@ function getGroupName(p: Post) {
               >
             </div>
             <div class="content" flex="~ col md:row gap-2 md:items-center flex-1">
-              <div class="title text-lg leading-1.2em" flex="~ gap-2 wrap">
-                <span
-                  v-if="route.lang === 'zh'"
-                  align-middle flex-none
-                  class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
-                >中文</span>
-                <span
-                  v-if="route.lang === 'ja'"
-                  align-middle flex-none
-                  class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--15 mr2 my-auto hidden md:block"
-                >日本語</span>
-                <span align-middle>{{ route.title }}</span>
-                <span
-                  v-if="route.redirect"
-                  align-middle op50 flex-none text-xs ml--1.5
-                  i-carbon-arrow-up-right
-                  title="External"
-                />
+              <div class="flex-1">
+                <div class="title text-lg leading-1.2em" flex="~ gap-2 wrap">
+                  <span
+                    v-if="route.lang === 'zh'"
+                    align-middle flex-none
+                    class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
+                  >中文</span>
+                  <span
+                    v-if="route.lang === 'ja'"
+                    align-middle flex-none
+                    class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--15 mr2 my-auto hidden md:block"
+                  >日本語</span>
+                  <span align-middle>{{ route.title }}</span>
+                  <span
+                    v-if="route.redirect"
+                    align-middle op50 flex-none text-xs ml--1.5
+                    i-carbon-arrow-up-right
+                    title="External"
+                  />
+                </div>
+                <div v-if="route.tags" class="tags" flex="~ wrap gap-2" mt-2>
+                  <span
+                    v-for="tag in route.tags"
+                    :key="tag"
+                    class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5"
+                  >
+                    {{ tag }}
+                  </span>
+                </div>
               </div>
 
               <div flex="~ gap-2 items-center">
