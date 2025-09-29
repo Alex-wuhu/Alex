@@ -24,6 +24,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving': RouteRecordInfo<'/posts/about-yak-shaving', '/posts/about-yak-shaving', Record<never, never>, Record<never, never>>,
     '/posts/about-yak-shaving-zh': RouteRecordInfo<'/posts/about-yak-shaving-zh', '/posts/about-yak-shaving-zh', Record<never, never>, Record<never, never>>,
+    '/posts/Defi': RouteRecordInfo<'/posts/Defi', '/posts/Defi', Record<never, never>, Record<never, never>>,
     '/posts/domain-email': RouteRecordInfo<'/posts/domain-email', '/posts/domain-email', Record<never, never>, Record<never, never>>,
     '/posts/get-package-root': RouteRecordInfo<'/posts/get-package-root', '/posts/get-package-root', Record<never, never>, Record<never, never>>,
     '/posts/github-alerts': RouteRecordInfo<'/posts/github-alerts', '/posts/github-alerts', Record<never, never>, Record<never, never>>,
@@ -66,6 +67,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/about-yak-shaving-zh.md': {
       routes: '/posts/about-yak-shaving-zh'
+      views: never
+    }
+    'pages/posts/Defi.md': {
+      routes: '/posts/Defi'
       views: never
     }
     'pages/posts/domain-email.md': {

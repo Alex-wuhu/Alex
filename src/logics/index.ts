@@ -51,6 +51,12 @@ export function toggleDark(event: MouseEvent) {
     })
 }
 
+/**
+ * Format date for display
+ * Supports formats: YYYY-MM-DD, ISO timestamps, Date objects
+ * @param d - Date string, Date object, or timestamp
+ * @param onlyDate - If true, only show month and day for current year
+ */
 export function formatDate(d: string | Date, onlyDate = true) {
   const date = dayjs(d)
   if (onlyDate || date.year() === dayjs().year())

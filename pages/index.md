@@ -4,15 +4,15 @@ description: Alex Yang's Portfolio
 art: random
 ---
 
-Hey! I'm Alex, a fanatical open sourceror and engineer.
+Hey there! I'm Alex Yang, and I build the future where Blockchain meets AI.
 
-Working at {Apus network}<br>
+Currently : AI&Blockchain developer at {Apus network}<br>
 
-Dreaming up cool ideas and making them come true is where my passion lies. I am enthusiastic about building tools that help myself and others to be more productive and enjoy the process of crafting. You can find my [full projects list here](/projects).
+Previously : Software engieer at {Samsung Electrions}.
 
-I write [blog posts](/posts) about open source, coding, etc.
+I write [blog posts](/posts) about AI Infra, Block-chain techonogly, etc.
 
-Outside of programming, I enjoy traveling. Also, in case you are interested, here are the [hardware/software I use](/use).
+Also, in case you are interested, here are the [hardware/software I use](/use).
 
 <div flex-auto />
 

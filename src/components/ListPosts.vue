@@ -28,7 +28,12 @@ const routes: Post[] = router.getRoutes()
 
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
+    .sort((a, b) => {
+      // Convert date strings (YYYY-MM-DD or ISO) to comparable timestamps
+      const dateA = new Date(a.date)
+      const dateB = new Date(b.date)
+      return +dateB - +dateA
+    })
     .filter(i => !englishOnly.value || !i.lang || i.lang === 'en'),
 )
 

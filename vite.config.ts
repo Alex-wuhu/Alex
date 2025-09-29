@@ -132,6 +132,8 @@ export default defineConfig({
             'VueUse': 'https://github.com/vueuse/vueuse',
             'UnoCSS': 'https://github.com/unocss/unocss',
             'Elk': 'https://github.com/elk-zone/elk',
+            'Apus network': 'https://www.apus.network/',
+            'Samsung Electrions': 'https://www.samsung.com',
             'Type Challenges': 'https://github.com/type-challenges/type-challenges',
             'Vue': 'https://github.com/vuejs/core',
             'Nuxt': 'https://github.com/nuxt/nuxt',
