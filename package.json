@@ -10,7 +10,6 @@
     "redirects": "tsx scripts/redirects.ts",
     "lint": "eslint .",
     "compress": "tsx scripts/img-compress-staged.ts",
-
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
@@ -26,6 +25,7 @@
     "nprogress": "catalog:frontend",
     "pinia": "catalog:frontend",
     "pixi.js": "catalog:frontend",
+    "satori": "catalog:dev",
     "shiki": "catalog:frontend",
     "shiki-magic-move": "catalog:frontend",
     "simplex-noise": "catalog:frontend",

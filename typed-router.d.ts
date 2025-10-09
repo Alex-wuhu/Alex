@@ -22,13 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
-    '/posts/about-yak-shaving': RouteRecordInfo<'/posts/about-yak-shaving', '/posts/about-yak-shaving', Record<never, never>, Record<never, never>>,
-    '/posts/about-yak-shaving-zh': RouteRecordInfo<'/posts/about-yak-shaving-zh', '/posts/about-yak-shaving-zh', Record<never, never>, Record<never, never>>,
     '/posts/Defi_Mooc': RouteRecordInfo<'/posts/Defi_Mooc', '/posts/Defi_Mooc', Record<never, never>, Record<never, never>>,
-    '/posts/domain-email': RouteRecordInfo<'/posts/domain-email', '/posts/domain-email', Record<never, never>, Record<never, never>>,
-    '/posts/get-package-root': RouteRecordInfo<'/posts/get-package-root', '/posts/get-package-root', Record<never, never>, Record<never, never>>,
-    '/posts/github-alerts': RouteRecordInfo<'/posts/github-alerts', '/posts/github-alerts', Record<never, never>, Record<never, never>>,
-    '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
@@ -61,32 +55,8 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/'
       views: never
     }
-    'pages/posts/about-yak-shaving.md': {
-      routes: '/posts/about-yak-shaving'
-      views: never
-    }
-    'pages/posts/about-yak-shaving-zh.md': {
-      routes: '/posts/about-yak-shaving-zh'
-      views: never
-    }
     'pages/posts/Defi_Mooc.md': {
       routes: '/posts/Defi_Mooc'
-      views: never
-    }
-    'pages/posts/domain-email.md': {
-      routes: '/posts/domain-email'
-      views: never
-    }
-    'pages/posts/get-package-root.md': {
-      routes: '/posts/get-package-root'
-      views: never
-    }
-    'pages/posts/github-alerts.md': {
-      routes: '/posts/github-alerts'
-      views: never
-    }
-    'pages/posts/github-co-authors.md': {
-      routes: '/posts/github-co-authors'
       views: never
     }
     'pages/projects.md': {

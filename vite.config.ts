@@ -1,5 +1,4 @@
-import { Buffer } from 'node:buffer'
-import { basename, dirname, resolve } from 'node:path'
+import { basename, resolve } from 'node:path'
 import MarkdownItShiki from '@shikijs/markdown-it'
 import { transformerNotationDiff, transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
@@ -12,7 +11,6 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
-import sharp from 'sharp'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -175,7 +173,7 @@ export default defineConfig({
           promises.push(
             fs.existsSync(`${id.slice(0, -3)}.png`)
               ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
-              : generateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
+              : generateOg(frontmatter.title!.trim(), `public/${path}`),
           )
           frontmatter.image = `https://antfu.me/${path}`
         })()
@@ -239,29 +237,18 @@ export default defineConfig({
   },
 })
 
-const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')
-
 async function generateOg(title: string, output: string) {
   if (fs.existsSync(output))
     return
 
-  await fs.mkdir(dirname(output), { recursive: true })
-  // breakline every 30 chars
-  const lines = title.trim().split(/(.{0,30})(?:\s|$)/g).filter(Boolean)
-
-  const data: Record<string, string> = {
-    line1: lines[0],
-    line2: lines[1],
-    line3: lines[2],
-  }
-  const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_, name) => data[name] || '')
-
-  console.log(`Generating ${output}`)
+  console.log(`Generating OG image: ${output}`)
   try {
-    await sharp(Buffer.from(svg))
-      .resize(1200 * 1.1, 630 * 1.1)
-      .png()
-      .toFile(output)
+    const { generateOGImage } = await import('./scripts/og')
+    await generateOGImage({
+      title: title.trim(),
+      author: 'Alex Yang',
+      website: 'antfu.me',
+    }, output)
   }
   catch (e) {
     console.error('Failed to generate og image', e)
