@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Post } from '~/types'
+import dayjs from 'dayjs'
 import { useRouter } from 'vue-router/auto'
 import { englishOnly, formatDate } from '~/logics'
 
@@ -11,7 +12,7 @@ const props = defineProps<{
 
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
-  .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
+  .filter(i => (i.path.startsWith('/posts/') || i.path.startsWith('/notes/')) && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
   .filter(i => !i.path.endsWith('.html') && (i.meta.frontmatter.type || 'blog').split('+').includes(props.type))
   .map(i => ({
     path: i.meta.frontmatter.redirect || i.path,
@@ -33,8 +34,8 @@ const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => {
       // Convert date strings (YYYY-MM-DD or ISO) to comparable timestamps
-      const dateA = new Date(a.date)
-      const dateB = new Date(b.date)
+      const dateA = dayjs(a.date)
+      const dateB = dayjs(b.date)
       return +dateB - +dateA
     })
     .filter(i => !englishOnly.value || !i.lang || i.lang === 'en')
@@ -46,8 +47,8 @@ const allTags = computed(() => {
   return Array.from(tags).sort()
 })
 
-const getYear = (a: Date | string | number) => new Date(a).getFullYear()
-const isFuture = (a?: Date | string | number) => a && new Date(a) > new Date()
+const getYear = (a: Date | string | number) => dayjs(a).toDate().getFullYear()
+const isFuture = (a?: Date | string | number) => a && dayjs(a).isAfter(dayjs())
 const isSameYear = (a?: Date | string | number, b?: Date | string | number) => a && b && getYear(a) === getYear(b)
 function isSameGroup(a: Post, b?: Post) {
   return (isFuture(a.date) === isFuture(b?.date)) && isSameYear(a.date, b?.date)

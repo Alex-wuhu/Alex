@@ -20,9 +20,15 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
-    '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
+    '/notes/': RouteRecordInfo<'/notes/', '/notes', Record<never, never>, Record<never, never>>,
+    '/notes/Docker': RouteRecordInfo<'/notes/Docker', '/notes/Docker', Record<never, never>, Record<never, never>>,
+    '/notes/Git': RouteRecordInfo<'/notes/Git', '/notes/Git', Record<never, never>, Record<never, never>>,
+    '/notes/Linux': RouteRecordInfo<'/notes/Linux', '/notes/Linux', Record<never, never>, Record<never, never>>,
+    '/notes/Pm2': RouteRecordInfo<'/notes/Pm2', '/notes/Pm2', Record<never, never>, Record<never, never>>,
+    '/notes/Tmux': RouteRecordInfo<'/notes/Tmux', '/notes/Tmux', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/Defi_Mooc': RouteRecordInfo<'/posts/Defi_Mooc', '/posts/Defi_Mooc', Record<never, never>, Record<never, never>>,
+    '/posts/GPU_TEE': RouteRecordInfo<'/posts/GPU_TEE', '/posts/GPU_TEE', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
@@ -47,8 +53,28 @@ declare module 'vue-router/auto-routes' {
       routes: '/[...404]'
       views: never
     }
-    'pages/notes.md': {
-      routes: '/notes'
+    'pages/notes/index.md': {
+      routes: '/notes/'
+      views: never
+    }
+    'pages/notes/Docker.md': {
+      routes: '/notes/Docker'
+      views: never
+    }
+    'pages/notes/Git.md': {
+      routes: '/notes/Git'
+      views: never
+    }
+    'pages/notes/Linux.md': {
+      routes: '/notes/Linux'
+      views: never
+    }
+    'pages/notes/Pm2.md': {
+      routes: '/notes/Pm2'
+      views: never
+    }
+    'pages/notes/Tmux.md': {
+      routes: '/notes/Tmux'
       views: never
     }
     'pages/posts/index.md': {
@@ -57,6 +83,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/Defi_Mooc.md': {
       routes: '/posts/Defi_Mooc'
+      views: never
+    }
+    'pages/posts/GPU_TEE.md': {
+      routes: '/posts/GPU_TEE'
       views: never
     }
     'pages/projects.md': {
