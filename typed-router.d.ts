@@ -31,6 +31,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Defi_Mooc': RouteRecordInfo<'/posts/Defi_Mooc', '/posts/Defi_Mooc', Record<never, never>, Record<never, never>>,
     '/posts/Deterministic_SGLang': RouteRecordInfo<'/posts/Deterministic_SGLang', '/posts/Deterministic_SGLang', Record<never, never>, Record<never, never>>,
     '/posts/GPU_TEE': RouteRecordInfo<'/posts/GPU_TEE', '/posts/GPU_TEE', Record<never, never>, Record<never, never>>,
+    '/posts/LLM_Inference_Frameworks': RouteRecordInfo<'/posts/LLM_Inference_Frameworks', '/posts/LLM_Inference_Frameworks', Record<never, never>, Record<never, never>>,
     '/posts/WASM': RouteRecordInfo<'/posts/WASM', '/posts/WASM', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
@@ -98,6 +99,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/GPU_TEE.md': {
       routes: '/posts/GPU_TEE'
+      views: never
+    }
+    'pages/posts/LLM_Inference_Frameworks.md': {
+      routes: '/posts/LLM_Inference_Frameworks'
       views: never
     }
     'pages/posts/WASM.md': {
