@@ -27,8 +27,11 @@ declare module 'vue-router/auto-routes' {
     '/notes/Pm2': RouteRecordInfo<'/notes/Pm2', '/notes/Pm2', Record<never, never>, Record<never, never>>,
     '/notes/Tmux': RouteRecordInfo<'/notes/Tmux', '/notes/Tmux', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
+    '/posts/Defeating_Nondeterminism': RouteRecordInfo<'/posts/Defeating_Nondeterminism', '/posts/Defeating_Nondeterminism', Record<never, never>, Record<never, never>>,
     '/posts/Defi_Mooc': RouteRecordInfo<'/posts/Defi_Mooc', '/posts/Defi_Mooc', Record<never, never>, Record<never, never>>,
+    '/posts/Deterministic_SGLang': RouteRecordInfo<'/posts/Deterministic_SGLang', '/posts/Deterministic_SGLang', Record<never, never>, Record<never, never>>,
     '/posts/GPU_TEE': RouteRecordInfo<'/posts/GPU_TEE', '/posts/GPU_TEE', Record<never, never>, Record<never, never>>,
+    '/posts/WASM': RouteRecordInfo<'/posts/WASM', '/posts/WASM', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
@@ -81,12 +84,24 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/'
       views: never
     }
+    'pages/posts/Defeating_Nondeterminism.md': {
+      routes: '/posts/Defeating_Nondeterminism'
+      views: never
+    }
     'pages/posts/Defi_Mooc.md': {
       routes: '/posts/Defi_Mooc'
       views: never
     }
+    'pages/posts/Deterministic_SGLang.md': {
+      routes: '/posts/Deterministic_SGLang'
+      views: never
+    }
     'pages/posts/GPU_TEE.md': {
       routes: '/posts/GPU_TEE'
+      views: never
+    }
+    'pages/posts/WASM.md': {
+      routes: '/posts/WASM'
       views: never
     }
     'pages/projects.md': {
