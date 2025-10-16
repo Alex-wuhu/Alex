@@ -68,6 +68,46 @@ onMounted(() => {
     if (!navigate())
       setTimeout(navigate, 1000)
   }, 1)
+
+  // Handle <pre> blocks
+  const preBlocks = content.value.querySelectorAll('pre')
+  preBlocks.forEach((pre) => {
+    const copyButton = document.createElement('button')
+    copyButton.innerHTML = '<div i-ri-file-copy-line />'
+    copyButton.classList.add('copy-button')
+    pre.appendChild(copyButton)
+    copyButton.addEventListener('click', () => {
+      const code = pre.querySelector('code')
+      if (code) {
+        navigator.clipboard.writeText(code.textContent)
+        copyButton.innerHTML = '<div i-ri-check-line />'
+        setTimeout(() => {
+          copyButton.innerHTML = '<div i-ri-file-copy-line />'
+        }, 2000)
+      }
+    })
+  })
+
+  // Handle <code> elements in tables
+  const codeBlocksInTables = content.value.querySelectorAll('td > code')
+  codeBlocksInTables.forEach((code) => {
+    const cell = code.parentElement
+    if (cell) {
+      cell.style.position = 'relative'
+      const copyButton = document.createElement('button')
+      copyButton.innerHTML = '<div i-ri-file-copy-line />'
+      copyButton.classList.add('copy-button-table')
+      cell.appendChild(copyButton)
+      copyButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        navigator.clipboard.writeText(code.textContent)
+        copyButton.innerHTML = '<div i-ri-check-line />'
+        setTimeout(() => {
+          copyButton.innerHTML = '<div i-ri-file-copy-line />'
+        }, 2000)
+      })
+    }
+  })
 })
 
 const ArtComponent = computed(() => {

@@ -265,6 +265,63 @@ h6:focus .header-anchor {
   border-radius: 50%;
 }
 
+.prose pre {
+  position: relative;
+}
+
+.prose pre .copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border: none;
+  background-color: #8882;
+  color: #888;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5em;
+  line-height: 1;
+}
+
+.prose pre:hover .copy-button {
+  opacity: 1;
+}
+
+.prose pre .copy-button:hover {
+  background-color: #8884;
+  color: white;
+}
+
+.prose td {
+  position: relative;
+}
+
+.prose td .copy-button-table {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border: none;
+  background-color: #8882;
+  color: #888;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5em;
+  line-height: 1;
+}
+
+.prose td:hover .copy-button-table {
+  opacity: 1;
+}
+
+.prose td .copy-button-table:hover {
+  background-color: #8884;
+  color: white;
+}
+
 /* Shiki Transformers */
 .prose code .highlighted {
   background-color: #8881;

@@ -15,17 +15,13 @@ A quick reference for the most common Git commands.
 
 To set up your Git identity.
 
-| Command                                            | Description                      |
-| -------------------------------------------------- | -------------------------------- |
-| `git config --global user.name "Your Name"`        | Set your name for all commits.   |
-| `git config --global user.email "you@example.com"` | Set your email for all commits.  |
-| `git config --list`                                | List all Git settings.           |
-| `git init`                                         | Initialize a new Git repository. |
-| `git clone <url>`                                  | Clone an existing repository.    |
-
-## Local Changes
-
-Managing changes in your working directory.
+| Command                                                    | Description                      |
+| ---------------------------------------------------------- | -------------------------------- |
+| `git config --global user.name "Alex-wuhu"`                | Set your name for all commits.   |
+| `git config --global user.email "yanglongwei06@gmail.com"` | Set your email for all commits.  |
+| `git config --list`                                        | List all Git settings.           |
+| `git init`                                                 | Initialize a new Git repository. |
+| `git clone <url>`                                          | Clone an existing repository.    |
 
 | Command                        | Description                       |
 | ------------------------------ | --------------------------------- |
@@ -41,14 +37,9 @@ Managing changes in your working directory.
 
 Working with branches.
 
-| Command                        | Description                              |
-| ------------------------------ | ---------------------------------------- |
-| `git branch`                   | List all local branches.                 |
-| `git branch <branch-name>`     | Create a new branch.                     |
-| `git checkout <branch-name>`   | Switch to a branch.                      |
-| `git checkout -b <new-branch>` | Create and switch to a new branch.       |
-| `git merge <branch-name>`      | Merge a branch into your current branch. |
-| `git branch -d <branch-name>`  | Delete a local branch.                   |
+| Command      | Description              |
+| ------------ | ------------------------ |
+| `git branch` | List all local branches. |
 
 ## Remote Repositories
 
