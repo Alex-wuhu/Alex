@@ -26,6 +26,7 @@ declare module 'vue-router/auto-routes' {
     '/notes/Linux': RouteRecordInfo<'/notes/Linux', '/notes/Linux', Record<never, never>, Record<never, never>>,
     '/notes/Pm2': RouteRecordInfo<'/notes/Pm2', '/notes/Pm2', Record<never, never>, Record<never, never>>,
     '/notes/Tmux': RouteRecordInfo<'/notes/Tmux', '/notes/Tmux', Record<never, never>, Record<never, never>>,
+    '/notes/Uv': RouteRecordInfo<'/notes/Uv', '/notes/Uv', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/Defeating_Nondeterminism': RouteRecordInfo<'/posts/Defeating_Nondeterminism', '/posts/Defeating_Nondeterminism', Record<never, never>, Record<never, never>>,
     '/posts/Defi_Mooc': RouteRecordInfo<'/posts/Defi_Mooc', '/posts/Defi_Mooc', Record<never, never>, Record<never, never>>,
@@ -79,6 +80,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/notes/Tmux.md': {
       routes: '/notes/Tmux'
+      views: never
+    }
+    'pages/notes/Uv.md': {
+      routes: '/notes/Uv'
       views: never
     }
     'pages/posts/index.md': {
