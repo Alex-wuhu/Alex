@@ -39,11 +39,13 @@ const { y: scroll } = useWindowScroll()
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
 
-        <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
-          <div i-uil-github-alt />
+        <a href="/YANG.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
+          <span class="lt-md:hidden">Resume</span>
+          <div i-ri-file-text-line class="md:hidden" />
         </a>
-        <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
-          <div i-la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
+
+        <a href="https://github.com/Alex-wuhu" target="_blank" title="GitHub" class="lt-md:hidden">
+          <div i-uil-github-alt />
         </a>
         <ToggleTheme />
       </div>
